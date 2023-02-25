@@ -48,26 +48,11 @@
   </style>
   <body>
     <ul class="nav-menu">
-        <li><a href="/site-1">Home</a></li><li><a href="/site-1/info">Info</a></li>
+        <li><a href="/site-1">Home</a></li><li><a href="/site-1/portfolio">Portfolio</a></li><li><a href="/site-1/info">Info</a></li>
     </ul>
     <div class="header">
     <h1>Homepage</h1>
     <p>Welcome to my site.</p>
     </div>
-    <script>
-        // Get the current page URL
-        var currentUrl = window.location.href;
-        
-        // Get all the links in the navigation menu
-        var navLinks = document.querySelectorAll('.nav-menu a');
-        
-        // Loop through all the links and check if their href attribute matches the current URL
-        for (var i = 0; i < navLinks.length; i++) {
-          if (navLinks[i].getAttribute('href') === currentUrl) {
-            // If the link matches, add an "active" class to its parent li element
-            navLinks[i].parentNode.classList.add('active');
-          }
-        }
-      </script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+    body {
+        background-color: rgb(44, 44, 44);
+        color: white;
+        margin: 0;
+        font-family: monaco, monospace;
+    }
+    .header {
+        margin: auto;
+        background: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683__480.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 480px;
+    }
+    .nav-menu {
+        margin: auto;
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        align-items: center;
+        flex-direction: row;
+        background: transparent;
+        color: black;
+        font-size: 18px;
+        padding: 2px 8px;
+    }
+    .nav-menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .nav-menu a:hover {
+      border-bottom: 2px solid #333;
+      margin-top: -2px
+    }

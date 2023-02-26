@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Parallax Homepage</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        height: 100vh;
+        background: url('https://example.com/background.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <h1>Welcome to My Parallax Homepage</h1>
+        <p>Scroll down to see the effect!</p>
+      </div>
+    </header>
+    <script>
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        let scrollPosition = window.pageYOffset;
+        header.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+      });
+    </script>
+  </body>
+</html>

@@ -4,11 +4,13 @@ body {
     margin: 0;
     font-family: monaco, monospace;
 }
+
 .container {
     max-width: 1080px;
     margin: auto;
     padding: 36px 12px;
 }
+
 .header {
     margin: auto;
     background: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683__480.png");
@@ -21,7 +23,9 @@ body {
     flex-direction: column;
     width: 100%;
     height: 480px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
+
 .nav-menu {
     margin: auto;
     position: absolute;
@@ -35,26 +39,155 @@ body {
     font-size: 18px;
     padding: 2px 8px;
 }
+
 .nav-menu a {
   color: inherit;
   text-decoration: none;
 }
+
 .nav-menu a:hover, a:focus, a:active, a:target {
   border-bottom: 2px solid #333;
   margin-top: -2px
 }
+
 .nav-menu a:target {
     text-decoration: underline;
     border-bottom: none;
   }
+
 .nav-menu a:target:hover {
     border-bottom: 2px solid #333;
   }
+
 .column-content {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    text-align: center;
   }
+
 .column-item {
     flex-basis: 48%;
   }
+
+.hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+  }
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+  
+.feature {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-basis: calc(33.33% - 20px);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+.feature img {
+    height: 100px;
+    margin: 20px auto;
+    width: max-content;
+  }
+  
+.feature h3 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  
+.feature p {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.5;
+  }
+  
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+  
+.testimonial {
+    flex-basis: calc(50% - 20px);
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+.testimonial img {
+    border-radius: 50%;
+    height: 100px;
+    margin: 20px auto ;
+    width: max-content;
+  }
+  
+.testimonial p {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.5;
+  }
+  
+.testimonial h4 {
+    font-size: 18px;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  @media only screen and (max-width: 768px) {
+
+.hero {
+    height: 300px;
+  }
+  
+.hero h2 {
+    font-size: 32px;
+  }
+  
+.features {
+    flex-direction: column;
+  }
+  
+.feature {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+.testimonials {
+    flex-direction: column;
+  }
+  
+.testimonial {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  
+}
+ footer {
+  margin: auto;
+  text-align: center;
+}

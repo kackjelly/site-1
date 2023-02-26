@@ -12,9 +12,9 @@ body {
 }
 
 .header {
-    margin: auto;
+    margin: -34px auto;
     background: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683__480.png");
-    background-position: 50% 50%;
+    background-position: 50% 0px;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -22,22 +22,23 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 480px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    height: 100vh;
 }
 
 .nav-menu {
     margin: auto;
-    position: absolute;
+    width: 100%;
+    height: 34px;
+    position: sticky;
+    top: 0px;
     display: flex;
-    justify-content: flex-start;
-    gap: 12px;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     background: transparent;
     color: black;
     font-size: 18px;
-    padding: 2px 8px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 
 .nav-menu a {
@@ -45,20 +46,22 @@ body {
   text-decoration: none;
 }
 
-.nav-menu a:hover, a:focus, a:active, a:target {
+.nav-menu a:hover {
   border-bottom: 2px solid #333;
-  margin-top: -2px
 }
 
-.nav-menu a:target {
-    text-decoration: underline;
-    border-bottom: none;
-  }
+#logo:hover {
+  border: none;
+}
 
-.nav-menu a:target:hover {
-    border-bottom: 2px solid #333;
-  }
-
+.nav-items {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto 12px;
+  gap: 12px;
+  align-items: center;
+  flex-direction: row;
+}
 .column-content {
     display: flex;
     justify-content: space-around;
@@ -69,6 +72,9 @@ body {
 .column-item {
     flex-basis: 48%;
   }
+.column-item p {
+  color: #888
+}
 
 .hero {
     background-image: url('hero.jpg');
@@ -190,4 +196,23 @@ body {
  footer {
   margin: auto;
   text-align: center;
+}
+
+button {
+  background: transparent;
+  border: 1px solid lightgrey;
+  padding: 8px 16px;
+  color: lightgrey;
+  margin: auto;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+h3 {
+  margin: auto;
 }

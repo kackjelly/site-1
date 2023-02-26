@@ -7,9 +7,14 @@
   </head>
   <body>
     <nav class="nav-menu">
+      <div class="nav-items">
+        <a id="logo" href="#"><h3>Jack</h3></a>
+      </div>
+      <div class="nav-items">
         <a id="home" href="/site-1">Home</a>
         <a id="portfolio" href="/site-1/portfolio">Portfolio</a>
         <a id="info" href="/site-1/info">Info</a>
+      </div>
     </nav>
     <div class="header">
     <h1>Homepage</h1>
@@ -19,9 +24,17 @@
       <div class="column-content">
         <div class="column-item">
         <h1>Portfolio</h1>
+        <p>Here's some cool stuff I've done</p>
+        <a href="/site-1/portfolio"><button>
+          Find out more
+        </button></a>
       </div>
       <div class="column-item">
         <h1>Info</h1>
+        <p>About me</p>
+        <a href="/site-1/info"><button class="button">
+          Find out more
+        </button></a>
       </div>
       </div>
       <section class="hero">
@@ -68,6 +81,11 @@
     
       // Set the text content of the span element to the current year
       document.getElementById("currentYear").textContent = currentYear;
+
+      window.addEventListener('scroll', function() {
+		let offset = window.pageYOffset;
+		document.querySelector('.header').style.backgroundPositionY = offset * 0.7 + 'px';
+	});
     </script>
   </body>
 </html>

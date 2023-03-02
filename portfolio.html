@@ -20,6 +20,39 @@
     <div class="header">
     <h1>Portfolio</h1>
     </div>
+    <div class="container">
+      <div class="preface">
+        <h1>A preface</h1>
+        <p>I believe in efficient & intuitive design. With all the bloated and slow websites that comprise the web of today, I feel inclined to put a bit more emphasis on simple and efficient designs.</p>
+        <a class="preface-anchor" href="#portfolio-content"><button class="portfolio-button">
+          Find out more
+        </button></a>
+      </div>
+    </div>
+      <div class="portfolio-spacer">
+        <p class="portfolio-spacer-text">Hello</p>
+      </div>
+        <section class="portfolio-content">
+          <h2>Here's some stuff I have done</h2>
+          <div class="portfolio-grid">
+            <div class="grid-item">
+              <h3>Use</h3>
+              <img src="https://media.istockphoto.com/id/1356386941/photo/mature-man-looking-at-a-digital-tablet-that-a-colleague-is-showing-at-work.jpg?s=612x612&w=0&k=20&c=EQX9lSvl9cZsa6Ff4JrYtlyDLJwijWZfo84GC9C7otc=">
+            </div>
+            <div class="grid-item">
+              <h3>Stock</h3>
+              <img src="https://media.istockphoto.com/id/1354077790/photo/man-working-at-home.jpg?s=612x612&w=0&k=20&c=ePzpG0JgiHd4R85JyoyxIndl4vYQP6avw9nNJ6Zgg8w=">
+            </div>
+            <div class="grid-item">
+              <h3>Images</h3>
+              <img src="https://media.istockphoto.com/id/521535828/photo/working.jpg?s=612x612&w=0&k=20&c=-7x8TdH1BZqyCQpqn3ZkUd-mHDcr3iyZowLzd6e9FqE=">
+            </div>
+            <div class="grid-item">
+              <h3>Why?</h3>
+              <img src="https://media.istockphoto.com/id/1169976759/photo/woman-using-a-computer.jpg?s=612x612&w=0&k=20&c=UxOgq8AtKYPfbiY-2uA8JYKjkPk2DGn2y1HtJgnreqM=">
+            </div>
+          </div>
+        </section>
     <footer>
       <p><span id="currentYear"></span> kackjelly. All rights reserved.</p>
   </footer>
@@ -29,6 +62,11 @@
       
         // Set the text content of the span element to the current year
         document.getElementById("currentYear").textContent = currentYear;
+
+        window.addEventListener('scroll', function() {
+		let offset = window.pageYOffset;
+		document.querySelector('.header').style.backgroundPositionY = offset * 0.7 + 'px';
+	});
       </script>
   </body>
 </html>
